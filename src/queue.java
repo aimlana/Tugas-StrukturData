@@ -8,7 +8,7 @@ public class queue {
       rear = -1;
     }
   
-    // check if the queue is full
+    // mengecek isi queue (apakah queue full?)
     boolean isFull() {
       if (front == 0 && rear == SIZE - 1) {
         return true;
@@ -16,7 +16,7 @@ public class queue {
       return false;
     }
   
-    // check if the queue is empty
+    // mengecek isi queue (apakah queue kosong?)
     boolean isEmpty() {
       if (front == -1)
         return true;
@@ -24,7 +24,7 @@ public class queue {
         return false;
     }
   
-    // insert elements to the queue
+    // insert elemen ke queue
     void enQueue(int element) {
   
       // if queue is full
@@ -33,37 +33,37 @@ public class queue {
       }
       else {
         if (front == -1) {
-          // mark front denote first element of queue
+          // tanda front menunjukkan elemen pertama antrian
           front = 0;
         }
   
         rear++;
-        // insert element at the rear
+        // sisipkan elemen di bagian belakang
         items[rear] = element;
         System.out.println("Insert " + element);
       }
     }
   
-    // delete element from the queue
+    // hapus elemen di queue
     int deQueue() {
       int element;
   
-      // if queue is empty
+      // jika queue kosong
       if (isEmpty()) {
         System.out.println("Queue is empty");
         return (-1);
       }
       else {
-        // remove element from the front of queue
+        // menghapus elemen (di depan) pada queue
         element = items[front];
   
-        // if the queue has only one element
+        // jika elemen queue hanya 1
         if (front >= rear) {
           front = -1;
           rear = -1;
         }
         else {
-          // mark next element as the front
+          // tandai elemen berikutnya sebagai bagian depan (front)
           front++;
         }
         System.out.println( element + " Deleted");
@@ -71,50 +71,50 @@ public class queue {
       }
     }
   
-    // display element of the queue
+    // tampilkan queue
     void display() {
       int i;
       if (isEmpty()) {
         System.out.println("Empty Queue");
       }
       else {
-        // display the front of the queue
+        // tampilkan elemen front queue
         System.out.println("\nFront index-> " + front);
   
-        // display element of the queue
+        // tampilkan queue
         System.out.println("Items -> ");
         for (i = front; i <= rear; i++)
           System.out.print(items[i] + "  ");
   
-        // display the rear of the queue
+        // tampilkan bagian belakang queue
         System.out.println("\nRear index-> " + rear);
       }
     }
   
     public static void main(String[] args) {
   
-      // create an object of Queue class
+      // membuat objek queue
       queue q = new queue();
   
-      // try to delete element from the queue
-      // currently queue is empty
-      // so deletion is not possible
+      // coba hapus elemen dari queue
+      // queue saat ini kosong
+      // jadi penghapusan tidak memungkinkan
       q.deQueue();
   
-      // insert elements to the queue
+      // memasukkan elemen ke queue
       for(int i = 1; i < 6; i ++) {
         q.enQueue(i);
       }
   
-      // 6th element can't be added to queue because queue is full
+      // elemen ke-6 tidak dapat ditambahkan ke antrean karena antrean sudah penuh
       q.enQueue(6);
   
       q.display();
   
-      // deQueue removes element entered first i.e. 1
+      // deQueue menghapus elemen yang dimasukkan terlebih dahulu yaitu 1
       q.deQueue();
   
-      // Now we have just 4 elements
+      // sekarang kita hanya memiliki 4 elemen
       q.display();
   
     }

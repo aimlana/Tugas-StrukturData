@@ -1,68 +1,68 @@
-// Stack implementation in Java
+// Implementasi di Java
 
 class stack {
 
     // store elements of stack
     private int arr[];
-    // represent top of stack
+    // represent bagian top stack
     private int top;
-    // total capacity of the stack
+    // kapasitas stack
     private int capacity;
   
-    // Creating a stack
+    // membuat stack
     stack(int size) {
-      // initialize the array
-      // initialize the stack variables
+      // menginisialisasi array
+      // menginisialisasi variabel tumpukan
       arr = new int[size];
       capacity = size;
       top = -1;
     }
   
-    // push elements to the top of stack
+    // push elemen ke stack
     public void push(int x) {
       if (isFull()) {
         System.out.println("Stack OverFlow");
   
-        // terminates the program
+        // mengakhiri program 
         System.exit(1);
       }
   
-      // insert element on top of stack
+      // memasukkan elemen ke stack
       System.out.println("Inserting " + x);
       arr[++top] = x;
     }
   
-    // pop elements from top of stack
+    // menampilkan elemen stack
     public int pop() {
   
-      // if stack is empty
-      // no element to pop
+      // jika tumpukan kosong
+      // tidak ada elemen untuk dimunculkan
       if (isEmpty()) {
         System.out.println("STACK EMPTY");
-        // terminates the program
+        // menghentikan program
         System.exit(1);
       }
   
-      // pop element from top of stack
+      // menampilkan elemen yang berada di atas stack
       return arr[top--];
     }
   
-    // return size of the stack
+    // mengembalikan ukuran stack
     public int getSize() {
       return top + 1;
     }
   
-    // check if the stack is empty
+    // cek apakah stack kosong (?)
     public Boolean isEmpty() {
       return top == -1;
     }
   
-    // check if the stack is full
+    // cek apakah stack penuh (?)
     public Boolean isFull() {
       return top == capacity - 1;
     }
   
-    // display elements of stack
+    // tampilkan stack
     public void printStack() {
       for (int i = 0; i <= top; i++) {
         System.out.print(arr[i] + ", ");
@@ -79,7 +79,7 @@ class stack {
       System.out.print("Stack: ");
       stack.printStack();
   
-      // remove element from stack
+      // hapus stack
       stack.pop();
       System.out.println("\nAfter popping out");
       stack.printStack();

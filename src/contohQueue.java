@@ -4,18 +4,18 @@ import java.util.LinkedList;
 class contohQueue {
 
   public static void main(String[] args) {
-    // Creating Queue using the LinkedList class
+    // Membuat Queue menggunakan kelas LinkedList
     Queue<Integer> numbers = new LinkedList<>();
 
     // enqueue
-    // insert element at the rear of the queue
+    // insert elemen ke queue
     numbers.offer(1);
     numbers.offer(2);
     numbers.offer(3);
     System.out.println("Queue: " + numbers);
 
     // dequeue
-    // delete element from the front of the queue
+    // menghapus elemen queue
     int removedNumber = numbers.poll();
     System.out.println("Removed Element: " + removedNumber);
 

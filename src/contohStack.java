@@ -3,16 +3,16 @@ import java.util.Stack;
 public class contohStack {
     public static void main(String[] args) {
 
-        // create an object of Stack class
+        // Buat Objek Stack
         Stack<String> animals= new Stack<>();
     
-        // push elements to top of stack
+        // push elemen ke stack (memasukkan elemen)
         animals.push("Dog");
         animals.push("Horse");
         animals.push("Cat");
         System.out.println("Stack: " + animals);
     
-        // pop element from top of stack
+        // pop elemen stack -> memunculkan elemen stack
         animals.pop();
         System.out.println("Stack after pop: " + animals);
     }

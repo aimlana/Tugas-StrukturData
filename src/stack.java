@@ -1,4 +1,4 @@
-// Implementasi di Java
+// Implementasi stack di Java
 
 class stack {
 
@@ -35,7 +35,7 @@ class stack {
     // menampilkan elemen stack
     public int pop() {
   
-      // jika tumpukan kosong
+      // jika stack kosong
       // tidak ada elemen untuk dimunculkan
       if (isEmpty()) {
         System.out.println("STACK EMPTY");

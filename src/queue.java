@@ -1,3 +1,5 @@
+// Implementasi queue di Java
+
 public class queue {
     int SIZE = 5;
     int items[] = new int[SIZE];
